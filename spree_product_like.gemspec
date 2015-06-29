@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_product_like'
-  s.version     = '2.1.4'
+  s.version     = '3-0-stable'
   s.summary     = 'Add a like/fav button to your site'
   s.description = "
                   As a logged in user: 
