@@ -1,6 +1,7 @@
 class Spree::LikesController < Spree::StoreController
   rescue_from ActiveRecord::RecordNotFound, :with => :render_404
   helper 'spree/products'
+  include Spree::Core::ControllerHelpers::Search
   def like_product
     current_spree_user.like(product)
     redirect_to product
