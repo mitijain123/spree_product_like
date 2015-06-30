@@ -1,9 +1,6 @@
 SpreeProductLike
 ================
-[![Build Status](https://travis-ci.org/netguru/spree_product_like.png)](https://travis-ci.org/netguru/spree_product_like)
-[![Coverage Status](https://coveralls.io/repos/netguru/spree_product_like/badge.png?branch=master)](https://coveralls.io/r/netguru/spree_product_like?branch=master)
-[![Code Climate](https://codeclimate.com/github/netguru/spree_product_like.png)](https://codeclimate.com/github/netguru/spree_product_like)
-
+Compatible with 3-0-stable version of spree
 This extensions adds a like/fav button for products.
 
 How it works?
@@ -19,23 +16,13 @@ As a logged in admin i can:
 
   - see list of products ordered by likes count 
 
-Demo
-----
-
-If you want to see how it works, visit [our demo shop](https://spree-product-like.herokuapp.com).
-
-You can login:
-
-  * as a customer `customer@example.com` / `customer`
-  * as an admin `salesman@example.com` / `salesman`
-
 Installation
 ------------
 
 Add spree_product_like to your Gemfile:
 
 ```ruby
-gem 'spree_product_like', git: 'https://github.com/netguru/spree_product_like.git', branch: '2-1-stable'
+gem 'spree_product_like', git: 'https://github.com/mitijain123/spree_product_like.git', branch: 'master'
 ```
 
 Bundle your dependencies and run the installation generator:
@@ -55,10 +42,3 @@ bundle
 bundle exec rake test_app
 bundle exec rspec spec
 ```
-
-Read more
-------------
-
-[Add Like Button to your Spree Store](https://netguru.co/blog/posts/add-like-button-to-your-spree-store).
-
-Copyright (c) 2014 [Netguru](http://netguru.co), released under the New BSD License
