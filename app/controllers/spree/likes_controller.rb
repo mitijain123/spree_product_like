@@ -15,6 +15,7 @@ class Spree::LikesController < Spree::StoreController
     @searcher = build_searcher(params)
     @products = @searcher.retrieve_products
     @products = @products.where(id: current_spree_user.likes.pluck(:product_id))
+    @taxonomies = Spree::Taxonomy.includes(root: :children)
   end
 
   private
