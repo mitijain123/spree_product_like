@@ -7,6 +7,12 @@ Spree::Core::Engine.routes.draw do
   end
 
   namespace :api, defaults: { format: 'json' } do
-  	resources :likes
+  	resources :likes do
+  		member do
+        post :like_product
+        post :unlike_product
+      end
+      
+  	end
  	end
 end
