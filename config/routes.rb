@@ -5,4 +5,8 @@ Spree::Core::Engine.routes.draw do
   namespace :admin do
     get '/products/products_ranking', as: 'products_ranking'
   end
+
+  namespace :api, defaults: { format: 'json' } do
+  	resources :likes
+ 	end
 end
