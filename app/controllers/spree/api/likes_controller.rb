@@ -21,12 +21,12 @@ class Spree::Api::LikesController < Spree::Api::BaseController
     else
       @products = Spree::Product.where(id: @current_api_user.likes.pluck(:product_id))
     end
-    expires_in 15.minutes, :public => true
-    headers['Surrogate-Control'] = "max-age=#{15.minutes}"
+    # expires_in 15.minutes, :public => true
+    # headers['Surrogate-Control'] = "max-age=#{15.minutes}"
     render json: @products, :include => 
       {:images => 
         {:methods => [:mini_url, :small_url, :large_url]}
-      }, :methods => [:brands, :display_price , :master, :price]    
+      }, :methods => [:brands, :display_price , :master, :price, :total_on_hand]    
   end
 
   private
