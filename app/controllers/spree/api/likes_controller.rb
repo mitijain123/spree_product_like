@@ -24,7 +24,7 @@ class Spree::Api::LikesController < Spree::Api::BaseController
     # expires_in 15.minutes, :public => true
     # headers['Surrogate-Control'] = "max-age=#{15.minutes}"
     render json: @products, :include =>
-      {:images => {:methods => [:mini_url, :small_url, :large_url]},
+      {:images => {:methods => [:mini_url, :small_url, :large_url, :product_url]},
        :master => {:methods => [:is_backorderable?, :in_stock?]}
       },
       :methods => [:brands, :display_price ,  :price, :total_on_hand]
